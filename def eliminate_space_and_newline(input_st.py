@@ -1,0 +1,17 @@
+import re
+
+def print_capital_words(sentence):
+    words_with_space = re.findall(r'\b[A-Z][a-z]*\b', sentence)
+    words_without_space = re.findall(r'[A-Z][a-z]*', sentence)
+
+    print("Capital words with spaces:")
+    for i, word in enumerate(words_with_space, start=1):
+        print(f"{i}. {word}")
+
+    print("\nCapital words without spaces:")
+    for i, word in enumerate(words_without_space, start=1):
+        print(f"{i}. {word}")
+
+if __name__ == "__main__":
+    input_paragraph = ("AberdeenAdaAdamsAdamsvilleAddystonAdelphiAkronAlbanyAlexandriaAlgerAllenAllianceAmandaAmberleyAmboyAmeliaAmherstAndersonAnnaAnsoniaAquillaArcadiaArcanumArchboldArlingtonArlington HeightsAshleyAshtabulaAshvilleAthensAtticaAtwaterAtwood LakeAuburnAuglaizeAugstinburgAuroraAvonAvon CityAvon LakeBailey LakesBainbridgeBairdsBallvilleBalticBaltimoreBarbertonBarnhillBartlowBataviaBathBayBazettaBeach CityBeachwoodBeaverBeavercreekBedfordBedford HeightsBellbrookBelle CenterBelle ValleyBellefontaineBellevueBellvilleBeloitBenningtonBentleyvilleBentonBentonvilleBereaBerkshireBerlinBerneBethelBethlehemBettsvilleBeverlyBexleyBig PrarieBig SpringBiglickBirchwood ManorBlakesleeBlanchesterBlanchsterBlendonBloomBloomdaleBloomingburgBloomvilleBlue AshBlue CreekBlufftonBolivarBostonBoston HeightsBotkinsBournevilleBowerstonBowling GreenBracevilleBradfordBradnerBradyBrady LakeBratenahlBrecksvilleBremenBriarwood BeachBriceBrimfieldBristolvilleBronsonBrook ParkBrookfieldBrooklynBrownBrown -St ParisBrownhelmBrunswickBrunswick HillsBrushcreekBryanBuckeye LakeBucklandBucyrus CityBuildingBulterBurbankBurgoonBurlingtonBurtonButlerCaananCadiz NonupgCaldwellCaledoniaCambridgeCamdenCanaanCanal WinchesterCantonCardingtonCareyCarlisleCarrollCarroltonCassCastineCatawbaCatawba IslandCecilCedarvilleCelinaCenterCenterburgCentervilleChagrin FallsChampionChardonCharlesChatfieldChathamChesterChestervilleChickasawChillicotheChippewaChippewa LakeCincinnatiCinnamon LakeCirclevilleClaibourneClaridonClarksburgClarksfieldClayClaytonClear CreekClearcreekClerkClevelandCleveland EastCleveland HeightsClevesCliftonClintonClydeCoaltonCoitsvilleColdwaterColerainCollegeCollege CornerCollinsColumbiaColumbia StationColumbusCommercial PointConcordConesvilleCongressConneautCoolvilleCopleyCortlandCorwinCoshoctonCountrysideCoventryCovingtonCraig BeachCranberryCraneCrawfordCrawford CountyCreekside")
+    print_capital_words(input_paragraph)
